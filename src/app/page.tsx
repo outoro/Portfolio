@@ -1,6 +1,5 @@
 "use client";
 
-import Dock from "./components/Dock";
 import TextDisperse from "./components/TextDisperse";
 import { useRef } from "react";
 
@@ -13,8 +12,8 @@ export default function Home() {
 
   return (
     <div className="flex items-center justify-center h-full">
-      <div>
-        <div className="line-flex">
+      <div className="w-[60vw]">
+        <div className="line-flex font-black">
           <p className="m-0">jeongeun</p>
           <p className="m-0">lee</p>
         </div>
@@ -25,12 +24,12 @@ export default function Home() {
         <TextDisperse setBackground={setBackground}>
           <p className="m-0">+ web frontend</p>
         </TextDisperse>
-        <div className="flex gap-8">
+        <div className="flex items-center justify-between">
           <TextDisperse setBackground={setBackground}>
-            <p className="m-0">⇀ about me</p>
+            <p className="m-0">⇝ about</p>
           </TextDisperse>
           <TextDisperse setBackground={setBackground}>
-            <p className="m-0">⇀ contact</p>
+            <p className="m-0">⇝ contact</p>
           </TextDisperse>
         </div>
       </div>
@@ -38,7 +37,6 @@ export default function Home() {
         ref={background}
         className="bg-black opacity-0 absolute w-full h-full pointer-events-none transition-opacity"
       ></div>
-      <Dock />
     </div>
   );
 }

@@ -1,12 +1,13 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard.css");
-
 @layer base {
-  html {
-    font-family: "Pretendard Variable", Pretendard, -apple-system, sans-serif;
+  * {
+    outline: 1px solid #f00;
   }
 
   body {
@@ -14,11 +15,12 @@
     height: 100vh;
     background-color: black;
     color: white;
+    line-height: 1;
   }
 }
 
 @layer components {
   .line-flex {
-    @apply flex items-center justify-between text-[6vw] uppercase
+    @apply flex items-center justify-between text-[6vw] uppercase font-light font-Poppins
   }
 }
