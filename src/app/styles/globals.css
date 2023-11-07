@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard.css");
+
+@layer base {
+  html {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, sans-serif;
+  }
+
+  body {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+  }
+}
+
+@layer components {
+  .line-flex {
+    @apply flex items-center justify-between text-[6vw] uppercase
+  }
+}

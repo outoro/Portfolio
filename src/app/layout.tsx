@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import Dock from "./components/Dock";
+import "./styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Jeongeun Lee",
@@ -13,11 +12,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="h-screen bg-black text-white">
-        {children}
-        <Dock />
-      </body>
+    <html lang="ko">
+      <body>{children}</body>
     </html>
   );
 }

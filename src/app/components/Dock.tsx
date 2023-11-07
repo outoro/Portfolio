@@ -17,10 +17,10 @@ const apps: app[] = [
   { id: 1, link: "/", icon: "H" },
   { id: 2, link: "/about", icon: "A" },
   { id: 3, link: "/project", icon: "P" },
-  { id: 4, link: "/", icon: "G" },
+  { id: 4, link: "https://github.com/outoro", icon: "G" },
   { id: 5, link: "/", icon: "T" },
   { id: 6, link: "/", icon: "V" },
-  { id: 7, icon: "V" },
+  { id: 7, icon: "G" },
 ];
 
 export default function Dock() {
