@@ -51,14 +51,13 @@ export default function Double({ projects, reversed }) {
     >
       <div ref={firstImage} className="w-[66.66%] ">
         <Link href={`/project/${projects[0].id}`}>
-          <div className="pb-[66.66%] relative bg-slate-400">
-            {/* <Image
-            src={projects[0].src}
-            fill={true}
-            alt={"image"}
-            priority
-            className="object-cover"
-          /> */}
+          <div className="pb-[66.66%] relative">
+            <Image
+              src="/project1.jpg"
+              alt="image"
+              fill={true}
+              className="object-cover"
+            />
           </div>
           <div className="p-3 text-base">
             <h3 className="text-xl mb-2 font-normal">{projects[0].name}</h3>
@@ -70,14 +69,13 @@ export default function Double({ projects, reversed }) {
 
       <div ref={secondImage} className="w-[33.33%] ">
         <Link href={`/project/${projects[1].id}`}>
-          <div className="pb-[66%] relative bg-orange-300">
-            {/* <Image
-            src={projects[1].src}
-            fill={true}
-            alt={"image"}
-            priority
-            className="object-cover"
-          /> */}
+          <div className="pb-[66%] relative ">
+            <Image
+              src="/project2.jpg"
+              alt="image"
+              fill={true}
+              className="object-cover"
+            />
           </div>
           <div className="p-3 text-base">
             <h3 className="text-xl mb-2 font-normal">{projects[1].name}</h3>

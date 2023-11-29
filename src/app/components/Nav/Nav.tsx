@@ -6,7 +6,7 @@ import { footerLinks } from "./data";
 
 export default function Nav() {
   return (
-    <div className="flex flex-col justify-between pt-[100px] px-[40px] pb-[50px] h-full box-border">
+    <div className="flex flex-col justify-between pt-[100px] px-[40px] h-full box-border">
       <div className="flex gap-3 flex-col">
         {links.map((link, i) => {
           const { title, href } = link;
@@ -19,7 +19,7 @@ export default function Nav() {
                 animate="enter"
                 exit="exit"
               >
-                <Link href={href} className="text-black text-5xl">
+                <Link href={href} className="text-5xl">
                   {title}
                 </Link>
               </motion.div>
@@ -38,7 +38,7 @@ export default function Nav() {
               initial="initial"
               animate="enter"
               exit="exit"
-              className="w-1/2 mt-1 text-black"
+              className="w-1/2 mt-1"
             >
               <Link href={href} target="_blank">{title}</Link>
             </motion.div>

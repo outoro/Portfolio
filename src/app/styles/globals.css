@@ -6,14 +6,15 @@
 @tailwind utilities;
 
 @layer base {
-  * {
-    /* outline: 1px solid #f00; */
-  }
+  /* * {
+    outline: 1px solid #f00;
+  } */
 
   body {
     width: 100%;
     /* background-color: black;
-    color: white; */
+    color: #fff; */
+    color: #101010;
     line-height: 1;
   }
 }
@@ -22,5 +23,9 @@
   .perspective {
     perspective: 120px;
     perspective-origin: bottom;
+  }
+
+  .margincenter {
+    @apply mx-auto my-0;
   }
 }

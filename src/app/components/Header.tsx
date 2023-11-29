@@ -5,8 +5,8 @@ import SideMenu from "./SideMenu/SideMenu";
 
 export default function Header() {
   return (
-    <header className="p-[50px] w-full">
-      <h1>
+    <header className="flex justify-between p-[50px] w-full">
+      <h1 className="font-semibold leading-6">
         <Link href="/">
           Jeongeun <br /> Lee •
         </Link>
