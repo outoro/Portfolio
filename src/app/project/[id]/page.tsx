@@ -9,14 +9,26 @@ import Link from "next/link";
 export default function Project() {
   const params = useParams();
   const matchedItem = projects.find((project) => project.id === +params.id);
-  const { name, techStack, videoId, serviceLink } = matchedItem;
+  const { name, techStack, videoId, serviceLink, githubLink, readmeLink } =
+    matchedItem;
 
   return (
     matchedItem && (
       <div className="">
         <div className="margincenter w-[1000px]">
-          <p className="text-[56px] font-bold text-center pt-[50px] pb-[60px]">
-            {name}
+          <p className="text-center pt-[50px] pb-[60px]">
+            <p className="text-[56px] font-bold">{name}</p>
+            <div className="flex items-center justify-center gap-3 text-[#AAAAAA] py-5 uppercase">
+              <Link href={serviceLink} target="_blank">
+                project
+              </Link>
+              <span className="w-[1px] h-[10px] bg-[#AAAAAA]" />
+              <span>January 22, 2013</span>
+              <span className="w-[1px] h-[10px] bg-[#AAAAAA]" />
+              <Link href={githubLink} target="_blank">
+                github
+              </Link>
+            </div>
           </p>
           <div className="pb-20">
             <p className="text-[32px] font-bold pt-8 pb-5">시연 영상</p>
@@ -31,29 +43,13 @@ export default function Project() {
                   modestbranding: 1,
                 },
               }}
-              //이벤트 리스너
               onEnd={(e) => {
                 e.target.stopVideo(0);
               }}
             />
           </div>
           <div className="pb-20">
-            <p className="text-[32px] font-bold pt-8 pb-5">배포 링크</p>
-            <Link href={serviceLink} target="_blank">
-              {serviceLink}
-            </Link>
-          </div>
-          <div className="pb-20">
-            <p className="text-[32px] font-bold pt-8 pb-5">README</p>
-            <div className="grid grid-cols-2">
-              <div className="bg-slate-600 h-20" />
-              <div className="bg-orange-500 h-20" />
-              <div className="bg-amber-900 h-20" />
-              <div className="bg-green-700 h-20" />
-            </div>
-          </div>
-          <div className="pb-20">
-            <p className="text-[32px] font-bold pt-8 pb-5">기획 의도</p>
+            <p className="text-[32px] font-bold pt-8 pb-5">프로젝트 소개</p>
             <div className="bg-[#f5f5f5] p-14 text-lg leading-7 rounded overflow-hidden">
               학생 인권 보호인가? 교권 보호인가? 최근 한국 사회를 뒤흔든 이
               문제에 정말 진지하게 접근하고자 한다면 을 봐야 할 것이다. 어느
@@ -72,6 +68,13 @@ export default function Project() {
               (남동철)
             </div>
           </div>
+
+          <div className="pb-20">
+            <p className="text-[32px] font-bold pt-8 pb-5">README</p>
+            <Link href={readmeLink} target="_blank">
+              {readmeLink}
+            </Link>
+          </div>
           <div className="pb-20">
             <p className="text-[32px] font-bold pt-8 pb-5">기술 스택</p>
             <div className="flex gap-2">
@@ -84,6 +87,12 @@ export default function Project() {
                 </span>
               ))}
             </div>
+          </div>
+          <div className="pb-20">
+            <p className="text-[32px] font-bold pt-8 pb-5">배포 링크</p>
+            <Link href={serviceLink} target="_blank">
+              {serviceLink}
+            </Link>
           </div>
         </div>
       </div>
