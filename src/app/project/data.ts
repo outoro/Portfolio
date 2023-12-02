@@ -16,7 +16,8 @@ export const projects = [
     videoId: "7ihLv8_Vd-4",
     serviceLink: "https://remonth.vercel.app/",
     githubLink: "https://github.com/outoro/remonth",
-    readmeLink: "https://github.com/outoro/remonth",
+    readmeLink:
+      "https://www.notion.so/Remonth-669f8169764f4d66b9eee269913d4d33?pvs=4",
   },
   {
     id: 2,

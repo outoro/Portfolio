@@ -1,7 +1,6 @@
 export const links = [
   { title: "Project", href: "/" },
-  { title: "About Me", href: "/about" },
-  { title: "Guest Book", href: "/" },
+  { title: "Guest Book", href: "/guestbook" },
 ];
 
 export const footerLinks = [

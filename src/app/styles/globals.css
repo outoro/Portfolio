@@ -6,14 +6,9 @@
 @tailwind utilities;
 
 @layer base {
-  /* * {
-    outline: 1px solid #f00;
-  } */
 
   body {
     width: 100%;
-    /* background-color: black;
-    color: #fff; */
     color: #101010;
     line-height: 1;
   }
