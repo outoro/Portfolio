@@ -13,7 +13,7 @@ export const projects = [
       "Framer Motion",
       "Vercel",
     ],
-    videoId: "7ihLv8_Vd-4",
+    videoId: "G5Gz6EIQZPI",
     serviceLink: "https://remonth.vercel.app/",
     githubLink: "https://github.com/outoro/remonth",
     readmeLink:
@@ -25,7 +25,6 @@ export const projects = [
     description: "New web design for the blockchain investment fund Maven 11.",
     year: "January, 2013",
     techStack: ["Tailwind CSS", "Vercel"],
-    videoId: "7ihLv8_Vd-4",
     serviceLink: "https://www.naver.com/",
     githubLink: "https://github.com/outoro/portfolio",
     readmeLink: "https://github.com/outoro/remonth",

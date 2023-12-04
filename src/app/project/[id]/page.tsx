@@ -5,6 +5,8 @@ import { projects } from "../data";
 import Image from "next/image";
 import YouTube from "react-youtube";
 import Link from "next/link";
+import Button from "@/app/components/Button/Button";
+import { IoMdArrowBack } from "react-icons/io";
 
 export default function Project() {
   const params = useParams();
@@ -16,39 +18,54 @@ export default function Project() {
     matchedItem && (
       <div className="">
         <div className="margincenter w-[1000px]">
-          <p className="text-center pt-[50px] pb-[60px]">
+          <div className="pt-[50px] pb-[30px]">
+            <Link
+              href="/"
+              className="flex items-center gap-[5px] text-[#4f576c] pb-5 text-[15px] font-normal"
+            >
+              <IoMdArrowBack />
+              <span>Back</span>
+            </Link>
             <p className="text-[56px] font-bold">{name}</p>
-            <div className="flex items-center justify-center gap-3 text-[#AAAAAA] py-5 uppercase">
-              <Link href={serviceLink} target="_blank">
-                project
-              </Link>
-              <span className="w-[1px] h-[10px] bg-[#AAAAAA]" />
-              <span>January 22, 2013</span>
-              <span className="w-[1px] h-[10px] bg-[#AAAAAA]" />
-              <Link href={githubLink} target="_blank">
-                github
-              </Link>
+            <p className="text-[#4f576c] text-base pt-10">
+              Remonth는 다시를 뜻하는 접두사 Re-를 month와 결합하여 만든
+              단어입니다. <br />
+              그냥 흘러버릴 일들도 기록하고 생각해보면 그 또한 나를 행복하게
+              만들어주는 소중한 추억 이었다는 걸 느끼게 됩니다. 보통의 순간들을
+              기록하고 공유하며
+            </p>
+            <div className="flex items-center gap-3 pt-5">
+              <Button text="Live Demo" link="https://remonth.vercel.app/" />
+              <Button text="README" link="https://remonth.vercel.app/" />
             </div>
-          </p>
-          <div className="pb-20">
-            <p className="text-[32px] font-bold pt-8 pb-5">시연 영상</p>
-            <YouTube
-              videoId={videoId}
-              opts={{
-                width: "1000",
-                height: "561",
-                playerVars: {
-                  autoplay: 1,
-                  rel: 0,
-                  modestbranding: 1,
-                },
-              }}
-              onEnd={(e) => {
-                e.target.stopVideo(0);
-              }}
-            />
           </div>
           <div className="pb-20">
+            {videoId ? (
+              <YouTube
+                videoId={videoId}
+                opts={{
+                  width: "1000",
+                  height: "561",
+                  playerVars: {
+                    autoplay: 0,
+                    rel: 0,
+                    modestbranding: 1,
+                  },
+                }}
+                onEnd={(e) => {
+                  e.target.stopVideo(0);
+                }}
+              />
+            ) : (
+              <Image
+                src={"/project" + +params.id + ".jpg"}
+                alt="image"
+                width="997"
+                height="561"
+              />
+            )}
+          </div>
+          {/* <div className="pb-20">
             <p className="text-[32px] font-bold pt-8 pb-5">프로젝트 소개</p>
             <div className="bg-[#f5f5f5] p-14 text-lg leading-7 rounded overflow-hidden">
               학생 인권 보호인가? 교권 보호인가? 최근 한국 사회를 뒤흔든 이
@@ -67,14 +84,19 @@ export default function Project() {
               사카모토의 음악이 흘러나오는 엔딩에 이르면 가슴이 먹먹할 영화다.
               (남동철)
             </div>
-          </div>
-
-          <div className="pb-20">
+          </div> */}
+          {/* <div className="pb-20">
             <p className="text-[32px] font-bold pt-8 pb-5">README</p>
             <Link href={readmeLink} target="_blank">
               {readmeLink}
             </Link>
           </div>
+          <div className="pb-20">
+            <p className="text-[32px] font-bold pt-8 pb-5">배포 링크</p>
+            <Link href={serviceLink} target="_blank">
+              {serviceLink}
+            </Link>
+          </div> */}
           <div className="pb-20">
             <p className="text-[32px] font-bold pt-8 pb-5">기술 스택</p>
             <div className="flex gap-2">
@@ -87,12 +109,6 @@ export default function Project() {
                 </span>
               ))}
             </div>
-          </div>
-          <div className="pb-20">
-            <p className="text-[32px] font-bold pt-8 pb-5">배포 링크</p>
-            <Link href={serviceLink} target="_blank">
-              {serviceLink}
-            </Link>
           </div>
         </div>
       </div>
