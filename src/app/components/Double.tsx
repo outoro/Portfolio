@@ -3,18 +3,19 @@
 import Image from "next/image";
 import { useRef } from "react";
 import Link from "next/link";
+import { projects } from "../utils/project";
 
-export default function Double({ projects, reversed }) {
-  const firstImage = useRef(null);
-  const secondImage = useRef(null);
-  let requestAnimationFrameId = null;
+export default function Double() {
+  const firstImage = useRef<HTMLDivElement>(null);
+  const secondImage = useRef<HTMLDivElement>(null);
+  let requestAnimationFrameId: any = null;
 
-  let xPercent = reversed ? 100 : 0;
-  let currentXPercent = reversed ? 100 : 0;
+  let xPercent = 0;
+  let currentXPercent = 0;
 
   const speed = 0.15;
 
-  const manageMouseMove = (e) => {
+  const manageMouseMove = (e: any) => {
     const { clientX } = e;
     xPercent = (clientX / window.innerWidth) * 100;
 
@@ -31,8 +32,12 @@ export default function Double({ projects, reversed }) {
     const firstImagePercent = 66.66 - currentXPercent * 0.33;
     const secondImagePercent = 33.33 + currentXPercent * 0.33;
 
-    firstImage.current.style.width = `${firstImagePercent}%`;
-    secondImage.current.style.width = `${secondImagePercent}%`;
+    if (firstImage.current) {
+      firstImage.current.style.width = `${firstImagePercent}%`;
+    }
+    if (secondImage.current) {
+      secondImage.current.style.width = `${secondImagePercent}%`;
+    }
 
     if (Math.round(xPercent) == Math.round(currentXPercent)) {
       window.cancelAnimationFrame(requestAnimationFrameId);

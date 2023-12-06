@@ -69,7 +69,7 @@ export default function SideMenu() {
   );
 }
 
-function PerspectiveText({ label }) {
+function PerspectiveText({ label }: any) {
   return (
     <div className="perspective-text">
       <p>{label}</p>

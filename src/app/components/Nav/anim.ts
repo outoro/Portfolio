@@ -6,7 +6,7 @@ export const perspective = {
     translateX: -20,
   },
 
-  enter: (i) => ({
+  enter: (i: number) => ({
     opacity: 1,
     rotateX: 0,
     translateY: 0,
@@ -31,7 +31,7 @@ export const slideIn = {
     y: 20,
   },
 
-  enter: (i) => ({
+  enter: (i: number) => ({
     opacity: 1,
     y: 0,
     transition: {
