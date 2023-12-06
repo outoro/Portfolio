@@ -52,9 +52,9 @@ export default function Double() {
       onMouseMove={(e) => {
         manageMouseMove(e);
       }}
-      className="flex mb-[10vh] h-[45vw]"
+      className="flex mb-[10vh] h-[45vw] "
     >
-      <div ref={firstImage} className="w-[66.66%] ">
+      <div ref={firstImage} className="w-[66.66%]">
         <Link href={`/project/${projects[0].id}`}>
           <div className="pb-[66.66%] relative">
             <Image

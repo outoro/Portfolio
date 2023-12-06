@@ -13,9 +13,9 @@ export type projectType = {
 export const projects: projectType[] = [
   {
     id: 1,
-    name: "remonth(다시 한 달)",
+    name: "remonth",
     description: "New web design for the blockchain investment fund Maven 11.",
-    year: "January, 2013",
+    year: "November, 2023",
     techStack: [
       "React",
       "Redux Toolkit",
@@ -35,7 +35,7 @@ export const projects: projectType[] = [
     id: 2,
     name: "2023 Portfolio",
     description: "New web design for the blockchain investment fund Maven 11.",
-    year: "January, 2013",
+    year: "December, 2023",
     techStack: ["Tailwind CSS", "Vercel"],
     service: "https://www.naver.com/",
     github: "https://github.com/outoro/portfolio",
