@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./NavButton.css";
 import Link from "next/link";
 
@@ -8,8 +7,6 @@ interface NavButtonProps {
 }
 
 export default function NavButton({ label, link }: NavButtonProps) {
-  const [isActive, setIsActive] = useState(false);
-
   return (
     <div className="button">
       <Link href={link}>

@@ -17,7 +17,7 @@ export default function Project() {
   const { name, service, readme, github, videoId, techStack } = matchedItem;
 
   return (
-    <div className="margincenter max-w-[62.5rem] px-[20px] desktop:px-0">
+    <div className="margincenter pt-[100px] max-w-[62.5rem] px-[20px] desktop:px-0">
       <div className="pt-[50px] pb-[30px]">
         <p className="text-[56px] font-bold">{name}</p>
         <p className="text-[#4f576c] text-base pt-10 dark:text-[#98a1b6]">
@@ -27,20 +27,21 @@ export default function Project() {
           만들어주는 소중한 추억 이었다는 걸 느끼게 됩니다. 보통의 순간들을
           기록하고 공유하며
         </p>
-        <div className="flex items-center gap-3 pt-5">
-          <Button text="Live Demo" link={service} />
+        <div className="flex items-center flex-wrap flex-row gap-3 pt-5">
+          <Button text="Demo Video" link={service} />
+          <Button text="Service Link" link={service} />
           <Button text="README" link={readme} />
           <Button text="GitHub" link={github} />
         </div>
       </div>
       <div className="pb-20">
-        <div className="w-full h-52 overflow-hidden relative">
+        <div className="w-full overflow-hidden relative h-[521px]">
           {videoId ? (
             <YouTube
               videoId={videoId}
               opts={{
                 width: "100%",
-                height: "100%",
+                height: "521",
                 playerVars: {
                   autoplay: 0,
                   rel: 0,

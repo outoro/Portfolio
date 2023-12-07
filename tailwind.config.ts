@@ -23,6 +23,9 @@ const config: Config = {
         laptop: "1024px",
         desktop: "1280px",
       },
+      boxShadow: {
+        shadow: "0 0 0 1px rgba(0,0,0,0.08)",
+      },
     },
   },
   plugins: [],

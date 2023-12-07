@@ -1,26 +1,24 @@
-.button {
+.theme-button {
     cursor: pointer;
-    border-radius: 30px;
+    border-radius: 50%;
     overflow: hidden;
-    background-color: #1B262C;
+    background-color: #161A30;
     color: white;
-    padding: 8px 20px;
-    height: 37px;
+    width: 34px;
+    height: 34px;
     text-transform: uppercase;
-    font-size: 15px;
-    font-weight: 600;
 }
 
-.button:hover .perspective-text {
+.theme-button:hover .perspective-text {
     transform: rotateX(90deg);
 }
 
-.button:hover .perspective-text p:nth-of-type(1) {
+.theme-button:hover .perspective-text p:nth-of-type(1) {
     transform: translateY(-100%);
     opacity: 0;
 }
 
-.button:hover .perspective-text p:nth-of-type(2) {
+.theme-button:hover .perspective-text p:nth-of-type(2) {
     opacity: 1;
 }
 

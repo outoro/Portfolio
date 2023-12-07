@@ -13,7 +13,7 @@ export type projectType = {
 export const projects: projectType[] = [
   {
     id: 1,
-    name: "remonth",
+    name: "Remonth",
     description: "New web design for the blockchain investment fund Maven 11.",
     year: "November, 2023",
     techStack: [

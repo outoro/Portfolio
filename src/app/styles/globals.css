@@ -8,7 +8,6 @@
 @layer base {
  body {
     width: 100%;
-    height: 100vh;
     color: #101010;
     line-height: 1;
   }

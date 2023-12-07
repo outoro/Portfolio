@@ -18,12 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body className="font-Pretendard text-[#101010] dark:text-[#ededed]">
+      <body className="font-Pretendard text-[#101010] dark:text-[#ededed] dark:bg-black">
         <ThemeProvider
-        attribute="class"
-        defaultTheme="system"
-        enableSystem
-        disableTransitionOnChange
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
         >
           <Header />
           <Suspense fallback={<Loading />}>{children}</Suspense>
