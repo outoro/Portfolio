@@ -17,7 +17,7 @@ export default function Project() {
   const { name, service, readme, github, videoId, techStack } = matchedItem;
 
   return (
-    <div className="margincenter pt-[100px] max-w-[62.5rem] px-[20px] desktop:px-0">
+    <div className="margincenter pt-[150px] pb-[50px] max-w-[62.5rem] px-[20px] desktop:px-0">
       <div className="pt-[50px] pb-[30px]">
         <p className="text-[56px] font-bold">{name}</p>
         <p className="text-[#4f576c] text-base pt-10 dark:text-[#98a1b6]">

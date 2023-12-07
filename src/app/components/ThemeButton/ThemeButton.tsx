@@ -2,12 +2,13 @@ import { useTheme } from "next-themes";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import "./ThemeButton.css";
 
-export default function ThemeButton() {
+export default function ThemeButton({ setIsActive }: any) {
   const { theme, setTheme } = useTheme();
   return (
     <button
       onClick={() => {
         setTheme(theme === "dark" ? "light" : "dark");
+        setIsActive(false);
       }}
       className="theme-button"
     >

@@ -1,12 +1,16 @@
 .theme-button {
-    cursor: pointer;
     border-radius: 50%;
     overflow: hidden;
-    background-color: #161A30;
-    color: white;
-    width: 34px;
-    height: 34px;
+    background-color: #ededed;
+    width: 42px;
+    height: 42px;
     text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.theme-button:hover {
+    box-shadow: 0 0 21px 0 #4479e2;
+    border: 1px solid #4479e2;
 }
 
 .theme-button:hover .perspective-text {

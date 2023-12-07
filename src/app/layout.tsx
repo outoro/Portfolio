@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./styles/globals.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import { ThemeProvider } from "./components/ThemeProvider";
 import { Suspense } from "react";
 import Loading from "./loading";
-import { ThemeProvider } from "./components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Jeongeun Lee",
