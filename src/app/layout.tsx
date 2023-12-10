@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body className="font-Pretendard text-[#101010] dark:text-[#ededed] dark:bg-black">
+      <body className="font-Pretendard text-[#101010] dark:text-[#ededed]">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

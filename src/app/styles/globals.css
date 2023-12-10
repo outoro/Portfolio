@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 @layer base {
- body {
+  body {
     width: 100%;
     color: #101010;
     line-height: 1;

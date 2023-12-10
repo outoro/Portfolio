@@ -24,6 +24,7 @@ const config: Config = {
       },
       boxShadow: {
         shadow: "0 0 0 1px rgba(0,0,0,0.08)",
+        themeButton: "0 0 21px 0 #4479e2",
       },
     },
   },

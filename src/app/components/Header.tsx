@@ -5,7 +5,9 @@ import Image from "next/image";
 import NavButton from "./NavButton/NavButton";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import ThemeButton from "./ThemeButton/ThemeButton";
+import ThemeButton from "./ThemeButton";
+import Button from "./Button";
+import AnimButton from "./AnimButton/AnimButton";
 
 const menu = {
   open: {
@@ -47,21 +49,24 @@ export default function Header() {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-10 bg-white dark:bg-black">
-      <div className="relative flex z-[999] justify-between items-center max-w-[1200px] mx-auto my-0 py-5 px-[20px] desktop:px-0">
+    <header className="fixed top-0 left-0 right-0 z-10 bg-white dark:bg-[#121212]">
+      <div className="relative flex z-[999] justify-between items-center max-w-[1200px] mx-auto my-0 py-[50px] px-[20px] desktop:px-0">
         <h1 className="font-semibold text-lg leading-6">
           <Link href="/">
             <Image src="/logo.png" width="37" height="37" alt="image" />
           </Link>
         </h1>
-        <NavButton isActive={isActive} setIsActive={setIsActive} />
+        <div className="flex gap-3">
+          <ThemeButton />
+          <NavButton isActive={isActive} setIsActive={setIsActive} />
+        </div>
       </div>
       <motion.div
         variants={menu}
         initial="closed"
         animate={isActive ? "open" : "closed"}
         exit="closed"
-        className="fixed top-0 left-0 w-screen text-[#0B1100] bg-[#c9fd74]"
+        className="fixed top-0 left-0 w-full text-[#0B1100] bg-[#c9fd74]"
       >
         {isActive && (
           <motion.ul
@@ -69,69 +74,37 @@ export default function Header() {
             initial="closed"
             animate={isActive ? "open" : "closed"}
             exit="closed"
-            className="max-w-[1200px] mx-auto my-0 pt-[340px] flex flex-col gap-20 text-3xl font-normal text-[#002300] pb-64 px-[20px] tracking-widest tablet:text-6xl desktop:px-0 tablet:pt-[400px]"
+            className="relative max-w-[1200px] mx-auto my-0 pt-[340px] flex flex-col gap-20 text-3xl font-normal text-[#002300] pb-64 px-[20px] tracking-widest tablet:text-6xl desktop:px-0 tablet:pt-[400px]"
           >
-            <li className="flex gap-0 flex-col  tablet:flex-row tablet:gap-6">
-              <Link
-                href="/"
-                className="opacity-50 hover:opacity-100 duration-300"
-              >
-                Home
-              </Link>
+            <li className="flex gap-0 flex-col tablet:flex-row tablet:gap-6">
+              <AnimButton label="Home" link="/" />
               <span className="opacity-50 hidden tablet:block">-</span>
-              <Link
-                href="/"
-                className="opacity-50 hover:opacity-100 duration-300"
-              >
-                About Me
-              </Link>
-              <span className="opacity-50 hidden tablet:block">-</span>
-              <Link
-                href="/"
-                className="opacity-50 hover:opacity-100 duration-300"
-              >
-                Overview
-              </Link>
+              <AnimButton
+                label="About Me"
+                link="https://www.notion.so/Jeongeun-Lee-5904b005d0fc47c2964209ea04448d33?pvs=4"
+              />
+              {/* <span className="opacity-50 hidden tablet:block">-</span>
+              <AnimButton label="Overview" link="/" /> */}
             </li>
             <li className="flex gap-0 flex-col tablet:flex-row tablet:gap-6">
-              <Link
-                href="/"
-                className="opacity-50 hover:opacity-100 duration-300"
-              >
-                Remonth
-              </Link>
+              <AnimButton label="Remonth" link="https://remonth.vercel.app/" />
               <span className="opacity-50 hidden tablet:block">-</span>
-              <Link
-                href="/"
-                className="opacity-50 hover:opacity-100 duration-300"
-              >
-                2023 Portfolio
-              </Link>
+              <AnimButton
+                label="2023 Portfolio"
+                link="https://portfolio-phi-indol-46.vercel.app"
+              />
             </li>
-            <li className="flex gap-0 text-lg flex-col tablet:flex-row tablet:text-2xl tablet:gap-6">
-              <Link
-                href="/"
-                className="opacity-50 hover:opacity-100 duration-300"
-              >
-                Velog
-              </Link>
-              <span className="opacity-50 hidden tablet:block">-</span>
-              <Link
-                href="/"
-                className="opacity-50 hover:opacity-100 duration-300"
-              >
-                GitHub
-              </Link>
-              <span className="opacity-50 hidden tablet:block">-</span>
-              <Link
-                href="/"
-                className="opacity-50 hover:opacity-100 duration-300"
-              >
-                TIL(Today I Learned)
-              </Link>
-            </li>
-            <li className="text-xl flex justify-end pr-6 mt-0 desktop:pr-0 desktop:mt-10">
-              <ThemeButton setIsActive={setIsActive} />
+            <li className="flex justify-between items-end">
+              <div className="flex gap-0 text-lg flex-col tablet:flex-row tablet:text-2xl tablet:gap-6">
+                <AnimButton label="Velog" link="https://velog.io/@outoro" />
+                <span className="opacity-50 hidden tablet:block">-</span>
+                <AnimButton label="GitHub" link="https://github.com/outoro" />
+                <span className="opacity-50 hidden tablet:block">-</span>
+                <AnimButton
+                  label="TIL(Today I Learned)"
+                  link="https://www.notion.so/Study-c1604f9b752e4182bb20a20c16fd0b67?pvs=4"
+                />
+              </div>
             </li>
           </motion.ul>
         )}

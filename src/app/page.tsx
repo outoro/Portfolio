@@ -30,7 +30,7 @@ export default function Home() {
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
-      <div className="h-full pt-[77px]">
+      <div className="h-full pt-[130px]">
         <div className="max-w-[1200px] mx-auto my-0 mt-[150px] mb-[100px] px-[20px] desktop:px-0">
           <p className="text-5xl leading-snug font-medium pb-8">
             <span>Welcome to my portfolio </span>
