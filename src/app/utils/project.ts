@@ -5,6 +5,7 @@ export type projectType = {
   year: string;
   techStack: string[];
   videoId?: string;
+  youtube?: string;
   service: string;
   github: string;
   readme: string;
@@ -26,6 +27,7 @@ export const projects: projectType[] = [
       "Vercel",
     ],
     videoId: "G5Gz6EIQZPI",
+    youtube: "https://youtu.be/G5Gz6EIQZPI",
     service: "https://remonth.vercel.app/",
     github: "https://github.com/outoro/remonth",
     readme:
@@ -37,8 +39,9 @@ export const projects: projectType[] = [
     description: "New web design for the blockchain investment fund Maven 11.",
     year: "December, 2023",
     techStack: ["Tailwind CSS", "Vercel"],
-    service: "https://www.naver.com/",
+    service: "https://portfolio-phi-indol-46.vercel.app",
     github: "https://github.com/outoro/portfolio",
-    readme: "https://github.com/outoro/remonth",
+    readme:
+      "https://www.notion.so/2023-Portfolio-60b1c9d0648f4b1bbd7ab46c81dba97d?pvs=4",
   },
 ];

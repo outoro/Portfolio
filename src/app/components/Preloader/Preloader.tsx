@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import "./Preloader.css";
 
 const slideUp = {
   initial: {
@@ -84,61 +83,89 @@ export default function Preloader() {
       variants={slideUp}
       initial="initial"
       exit="exit"
-      className="preloader"
+      className="h-screen w-screen bg-black fixed top-0 left-0 z-[99] text-white flex items-center justify-center text-3xl font-bold desktop:text-7xl"
     >
       {dimension.width > 0 && (
-        <div className="text-container">
+        <div className="flex flex-col">
           <motion.div
-            className="model"
+            className="overflow-hidden z-[1] pb-3 mb-[15px] desktop:mb-[60px]"
             initial="initial"
             animate="animate"
             exit="exit"
           >
-            <motion.span className="first" variants={firstName}>
-              <motion.span variants={letter}>A </motion.span>
-              <motion.span variants={letter}>{"\u00A0"}</motion.span>
-              <motion.span variants={letter}>l</motion.span>
-              <motion.span variants={letter}>i</motion.span>
-              <motion.span variants={letter}>f</motion.span>
-              <motion.span variants={letter}>e </motion.span>
-              <motion.span variants={letter}>{"\u00A0"}</motion.span>
-              <motion.span variants={letter}>g</motion.span>
-              <motion.span variants={letter}>r</motion.span>
-              <motion.span variants={letter}>o</motion.span>
-              <motion.span variants={letter}>w</motion.span>
-              <motion.span variants={letter}>s</motion.span>
-              <motion.span variants={letter}>,</motion.span>
+            <motion.span variants={firstName}>
+              <motion.span variants={letter} className="inline-block relative">
+                A
+              </motion.span>
+              <motion.span variants={letter} className="inline-block relative">
+                {"\u00A0"}
+              </motion.span>
+              {"life".split("").map((str, i) => (
+                <motion.span
+                  key={i}
+                  variants={letter}
+                  className="inline-block relative"
+                >
+                  {str}
+                </motion.span>
+              ))}
+              <motion.span variants={letter} className="inline-block relative">
+                {"\u00A0"}
+              </motion.span>
+              {"grows,".split("").map((str, i) => (
+                <motion.span
+                  key={i}
+                  variants={letter}
+                  className="inline-block relative"
+                >
+                  {str}
+                </motion.span>
+              ))}
             </motion.span>
           </motion.div>
           <motion.div
-            className="model"
+            className="overflow-hidden z-[1] mb-0 pb-3"
             initial="initial"
             animate="animate"
             exit="exit"
           >
-            <motion.span className="last" variants={lastName}>
-              <motion.span variants={letter}>a</motion.span>
-              <motion.span variants={letter}>w</motion.span>
-              <motion.span variants={letter}>a</motion.span>
-              <motion.span variants={letter}>k</motion.span>
-              <motion.span variants={letter}>e</motion.span>
-              <motion.span variants={letter}>n</motion.span>
-              <motion.span variants={letter}>i</motion.span>
-              <motion.span variants={letter}>n</motion.span>
-              <motion.span variants={letter}>g</motion.span>
-              <motion.span variants={letter}>{"\u00A0"}</motion.span>
-              <motion.span variants={letter}>n</motion.span>
-              <motion.span variants={letter}>e</motion.span>
-              <motion.span variants={letter}>w</motion.span>
-              <motion.span variants={letter}>{"\u00A0"}</motion.span>
-              <motion.span variants={letter}>z</motion.span>
-              <motion.span variants={letter}>e</motion.span>
-              <motion.span variants={letter}>s</motion.span>
-              <motion.span variants={letter}>t</motion.span>
-              <motion.span variants={letter}>.</motion.span>
+            <motion.span variants={lastName}>
+              {"awakening".split("").map((str, i) => (
+                <motion.span
+                  key={i}
+                  variants={letter}
+                  className="inline-block relative"
+                >
+                  {str}
+                </motion.span>
+              ))}
+              <motion.span variants={letter} className="inline-block relative">
+                {"\u00A0"}
+              </motion.span>
+              {"new".split("").map((str, i) => (
+                <motion.span
+                  key={i}
+                  variants={letter}
+                  className="inline-block relative"
+                >
+                  {str}
+                </motion.span>
+              ))}
+              <motion.span variants={letter} className="inline-block relative">
+                {"\u00A0"}
+              </motion.span>
+              {"zest.".split("").map((str, i) => (
+                <motion.span
+                  key={i}
+                  variants={letter}
+                  className="inline-block relative"
+                >
+                  {str}
+                </motion.span>
+              ))}
             </motion.span>
           </motion.div>
-          <motion.div
+          {/* <motion.div
             className="model"
             initial="initial"
             animate="animate"
@@ -162,7 +189,7 @@ export default function Preloader() {
             >
               삶은 성장한다, 새로운 열정을 깨우며.
             </motion.p>
-          </motion.div>
+          </motion.div> */}
         </div>
       )}
     </motion.div>

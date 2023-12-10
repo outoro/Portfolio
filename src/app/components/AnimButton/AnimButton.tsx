@@ -1,7 +1,13 @@
 import Link from "next/link";
 import "./AnimButton.css";
 
-export default function AnimButton({ label, link }) {
+export default function AnimButton({
+  label,
+  link,
+}: {
+  label: string;
+  link: string;
+}) {
   return (
     <div className="anim-button">
       <Link href={link} target="_blank">
@@ -11,7 +17,7 @@ export default function AnimButton({ label, link }) {
   );
 }
 
-function PerspectiveText({ label }) {
+function PerspectiveText({ label }: { label: string }) {
   return (
     <div className="pp-text">
       <p>{label}</p>

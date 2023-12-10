@@ -14,7 +14,8 @@ export default function Project() {
     return <p>프로젝트를 찾을 수 없습니다</p>;
   }
 
-  const { name, service, readme, github, videoId, techStack } = matchedItem;
+  const { name, youtube, service, readme, github, videoId, techStack } =
+    matchedItem;
 
   return (
     <div className="margincenter pt-[150px] pb-[50px] max-w-[62.5rem] px-[20px] desktop:px-0">
@@ -28,7 +29,7 @@ export default function Project() {
           기록하고 공유하며
         </p>
         <div className="flex items-center flex-wrap flex-row gap-3 pt-5">
-          <Button text="Demo Video" link={service} />
+          {youtube && <Button text="Demo Video" link={youtube} />}
           <Button text="Service Link" link={service} />
           <Button text="README" link={readme} />
           <Button text="GitHub" link={github} />
@@ -54,7 +55,7 @@ export default function Project() {
               src={"/project" + +params.id + ".jpg"}
               alt="project-image"
               layout="fill"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
             />
           )}
         </div>

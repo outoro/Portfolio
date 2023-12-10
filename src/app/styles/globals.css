@@ -6,6 +6,10 @@
 @tailwind utilities;
 
 @layer base {
+  /* * {
+    outline: 1px solid #f00;
+  } */
+
   body {
     width: 100%;
     color: #101010;

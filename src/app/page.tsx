@@ -32,13 +32,14 @@ export default function Home() {
       </AnimatePresence>
       <div className="h-full pt-[130px]">
         <div className="max-w-[1200px] mx-auto my-0 mt-[150px] mb-[100px] px-[20px] desktop:px-0">
-          <p className="text-5xl leading-snug font-medium pb-8">
+          <p className="text-3xl leading-snug font-medium pb-8 desktop:text-5xl desktop:leading-[1.4]">
             <span>Welcome to my portfolio </span>
             <Image
               src="/logo.png"
               width="30"
               height="30"
               alt="image"
+              style={{ objectFit: "cover" }}
               className="inline-block"
             />{" "}
             <span className="opacity-50">
@@ -62,7 +63,12 @@ export default function Home() {
           <motion.div className="w-full">
             <Link href={`/project/${projects[0].id}`}>
               <div className="w-full h-[643px] relative overflow-hidden">
-                <Image src="/project1.jpg" alt="image" fill objectFit="cover" />
+                <Image
+                  src="/project1.jpg"
+                  alt="image"
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
                 <div className="p-3 text-base absolute bottom-0 left-0"></div>
               </div>
             </Link>
@@ -70,7 +76,12 @@ export default function Home() {
           <motion.div className="w-full">
             <Link href={`/project/${projects[1].id}`}>
               <div className="w-full h-[643px] relative overflow-hidden">
-                <Image src="/project2.jpg" alt="image" fill objectFit="cover" />
+                <Image
+                  src="/project2.jpg"
+                  alt="image"
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
               </div>
             </Link>
           </motion.div>
