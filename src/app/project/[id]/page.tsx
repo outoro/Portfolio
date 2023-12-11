@@ -4,7 +4,7 @@ import { useParams } from "next/navigation";
 import Image from "next/image";
 import YouTube from "react-youtube";
 import Button from "@/components/Button/Button";
-import { projects } from "@/utils/project";
+import { projects } from "@/constants/project";
 
 export default function Project() {
   const params = useParams();

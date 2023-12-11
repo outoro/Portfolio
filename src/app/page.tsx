@@ -5,7 +5,7 @@ import Button from "../components/Button/Button";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Preloader from "../components/Preloader/Preloader";
-import { projects } from "../utils/project";
+import { projects } from "../constants/project";
 import Link from "next/link";
 import Double from "../components/Double/Double";
 

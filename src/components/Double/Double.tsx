@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useRef } from "react";
 import Link from "next/link";
-import { projects } from "../../utils/project";
+import { projects } from "../../constants/project";
 
 export default function Double() {
   const firstImage = useRef<HTMLDivElement>(null);
