@@ -1,3 +1,4 @@
+import PerspectiveText from "../PerspectiveText/PerspectiveText";
 import "./NavButton.css";
 import { motion } from "framer-motion";
 
@@ -36,15 +37,6 @@ export default function NavButton({
           <PerspectiveText label="Close" />
         </div>
       </motion.div>
-    </div>
-  );
-}
-
-function PerspectiveText({ label }: any) {
-  return (
-    <div className="perspective-text">
-      <p>{label}</p>
-      <p>{label}</p>
     </div>
   );
 }

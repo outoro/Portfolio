@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import "./styles/globals.css";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import { ThemeProvider } from "./components/ThemeProvider";
+import "../styles/globals.css";
+import Footer from "../components/Footer/Footer";
+import Header from "../components/Header/Header";
+import { ThemeProvider } from "../components/ThemeButton/ThemeProvider";
 import { Suspense } from "react";
 import Loading from "./loading";
 
@@ -16,9 +16,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
   return (
     <html lang="ko">
-      <body className="font-Pretendard text-[#101010] dark:text-[#ededed]">
+      <body  className="font-Pretendard text-[#101010] dark:text-[#ededed]">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

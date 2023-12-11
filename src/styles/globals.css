@@ -6,25 +6,9 @@
 @tailwind utilities;
 
 @layer base {
-  /* * {
-    outline: 1px solid #f00;
-  } */
-
-  body {
+   body {
     width: 100%;
     color: #101010;
     line-height: 1;
-    cursor: none;
-  }
-}
-
-@layer components {
-  .perspective {
-    perspective: 120px;
-    perspective-origin: bottom;
-  }
-
-  .margincenter {
-    @apply mx-auto my-0;
   }
 }

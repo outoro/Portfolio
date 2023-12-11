@@ -1,28 +1,23 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Button from "./components/Button";
+import Button from "../components/Button/Button";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import Preloader from "./components/Preloader/Preloader";
-import { projects } from "./utils/project";
+import Preloader from "../components/Preloader/Preloader";
+import { projects } from "../utils/project";
 import Link from "next/link";
-import Double from "./components/Double";
+import Double from "../components/Double/Double";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
-
-      setTimeout(() => {
-        setIsLoading(false);
-        document.body.style.cursor = "default";
-        window.scrollTo(0, 0);
-      }, 2000);
-    })();
+    setTimeout(() => {
+      setIsLoading(false);
+      document.body.style.cursor = "default";
+      window.scrollTo(0, 0);
+    }, 2000);
   }, []);
 
   return (
@@ -67,9 +62,9 @@ export default function Home() {
                   src="/project1.jpg"
                   alt="image"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   style={{ objectFit: "cover" }}
                 />
-                <div className="p-3 text-base absolute bottom-0 left-0"></div>
               </div>
             </Link>
           </motion.div>
@@ -80,6 +75,7 @@ export default function Home() {
                   src="/project2.jpg"
                   alt="image"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   style={{ objectFit: "cover" }}
                 />
               </div>

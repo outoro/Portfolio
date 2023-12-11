@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useRef } from "react";
 import Link from "next/link";
-import { projects } from "../utils/project";
+import { projects } from "../../utils/project";
 
 export default function Double() {
   const firstImage = useRef<HTMLDivElement>(null);
@@ -61,31 +61,33 @@ export default function Double() {
               src="/project1.jpg"
               alt="image"
               fill={true}
-              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              style={{ objectFit: "cover" }}
             />
           </div>
           <div className="p-3 text-base">
-            <h3 className="text-xl mb-2 font-normal">{projects[0].name}</h3>
-            <p>{projects[0].description}</p>
-            <p>{projects[0].year}</p>
+            <h3 className="text-xl mb-2 font-medium">{projects[0].name}</h3>
+            <p className="text-[#4f576c]">{projects[0].description}</p>
+            <p className="text-[#4f576c]">{projects[0].year}</p>
           </div>
         </Link>
       </div>
 
       <div ref={secondImage} className="w-[33.33%] ">
         <Link href={`/project/${projects[1].id}`}>
-          <div className="pb-[66%] relative ">
+          <div className="pb-[66%] relative">
             <Image
               src="/project2.jpg"
               alt="image"
               fill={true}
-              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              style={{ objectFit: "cover" }}
             />
           </div>
           <div className="p-3 text-base">
-            <h3 className="text-xl mb-2 font-normal">{projects[1].name}</h3>
-            <p>{projects[1].description}</p>
-            <p>{projects[1].year}</p>
+            <h3 className="text-xl mb-2 font-medium">{projects[1].name}</h3>
+            <p className="text-[#4f576c]">{projects[1].description}</p>
+            <p className="text-[#4f576c]">{projects[1].year}</p>
           </div>
         </Link>
       </div>
