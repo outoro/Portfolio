@@ -62,6 +62,7 @@ export default function Home() {
                   src="/project1.jpg"
                   alt="image"
                   fill
+                  priority
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   style={{ objectFit: "cover" }}
                 />
@@ -75,6 +76,7 @@ export default function Home() {
                   src="/project2.jpg"
                   alt="image"
                   fill
+                  priority
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   style={{ objectFit: "cover" }}
                 />

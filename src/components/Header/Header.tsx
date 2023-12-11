@@ -21,7 +21,6 @@ export default function Header() {
       } else {
         setIsScrolled(false);
       }
-      console.log(isScrolled);
     });
   }, []);
 
@@ -36,7 +35,7 @@ export default function Header() {
     >
       <motion.div
         className={
-          "relative flex z-[999] justify-between items-center max-w-[1200px] mx-auto my-0 py-[50px] px-[20px] duration-300 desktop:px-0" +
+          "relative flex z-[999] justify-between items-center max-w-[1200px] mx-auto my-0 px-[20px] duration-300 desktop:px-0" +
           (isScrolled ? " py-[20px]" : " py-[50px]")
         }
       >
