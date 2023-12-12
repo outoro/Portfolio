@@ -18,7 +18,7 @@ export const projects: projectType[] = [
     name: "Remonth",
     description: "New web design for the blockchain investment fund Maven 11.",
     detailInfo:
-      "Remonth는 '다시'를 뜻하는 접두사 'Re-'를 'month'와 결합하여 만든 단어입니다.\n영화, 순간, 음식 등 보통의 순간들 중 나를 행복하게 해준 것들을 기록하고 공유하며 다시 한 달을 돌아볼 수 있는 프로젝트입니다.",
+      "Remonth는 '다시'를 뜻하는 접두사 'Re-'를 'month'와 결합하여 만든 단어입니다. 좋은 영화, 사랑하는 사람과 함께한 순간, 맛있는 음식 등 일상의 소중한 순간을 기록하고 공유하며 추억을 간직할 할 수 있도록 하는 형태의 프로젝트입니다.",
     year: "2023",
     techStack: [
       "React.js",

@@ -19,7 +19,7 @@ export default function RootLayout({
 
   return (
     <html lang="ko">
-      <body  className="font-Pretendard text-[#101010] dark:text-[#ededed]">
+      <body className="w-full leading-[1] leading font-Pretendard text-[#101010] dark:text-[#ededed] dark:bg-[#121212] duration-300">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
