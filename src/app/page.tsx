@@ -46,11 +46,11 @@ export default function Home() {
             <Button text="GitHub" link="https://github.com/outoro" />
             <Button
               text="TIL"
-              link="https://www.notion.so/Study-c1604f9b752e4182bb20a20c16fd0b67?pvs=4"
+              link="https://sand-newt-068.notion.site/TIL-Today-I-Learned-59d6cb1f145a4c23b17940d8cb55de31?pvs=4"
             />
             <Button
               text="About Me"
-              link="https://www.notion.so/Jeongeun-Lee-5904b005d0fc47c2964209ea04448d33?pvs=4"
+              link="https://sand-newt-068.notion.site/Jeongeun-Lee-5904b005d0fc47c2964209ea04448d33?pvs=4"
             />
           </div>
         </div>

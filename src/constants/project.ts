@@ -34,7 +34,7 @@ export const projects: projectType[] = [
     service: "https://remonth.vercel.app/",
     github: "https://github.com/outoro/remonth",
     readme:
-      "https://www.notion.so/Remonth-9843e8b0c5c1493aba61b04e9b6e9c10?pvs=4",
+      "https://sand-newt-068.notion.site/Remonth-9843e8b0c5c1493aba61b04e9b6e9c10?pvs=4",
   },
   {
     id: 2,
@@ -47,6 +47,6 @@ export const projects: projectType[] = [
     service: "https://portfolio-phi-indol-46.vercel.app",
     github: "https://github.com/outoro/portfolio",
     readme:
-      "https://www.notion.so/2023-Portfolio-60b1c9d0648f4b1bbd7ab46c81dba97d?pvs=4",
+      "https://sand-newt-068.notion.site/2023-Portfolio-60b1c9d0648f4b1bbd7ab46c81dba97d?pvs=4",
   },
 ];
