@@ -17,7 +17,7 @@ export default function SideBar({ isActive }: { isActive: boolean }) {
           initial="closed"
           animate={isActive ? "open" : "closed"}
           exit="closed"
-          className="relative max-w-[1200px] mx-auto my-0 pt-[340px] flex flex-col gap-20 text-3xl font-normal text-[#002300] pb-64 px-[20px] tracking-widest tablet:text-6xl desktop:px-0 tablet:pt-[400px]"
+          className="relative max-w-[1200px] mx-auto my-0 pt-[270px] flex flex-col gap-20 text-3xl font-normal text-[#002300] pb-64 px-[20px] tracking-widest tablet:text-6xl desktop:px-0 tablet:pt-[400px]"
         >
           <li className="flex gap-0 flex-col tablet:flex-row tablet:gap-6">
             <AnimButton label="Home" link="/" />
