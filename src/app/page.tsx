@@ -33,7 +33,7 @@ export default function Home() {
               src="/logo.png"
               width="30"
               height="30"
-              alt="image"
+              alt=""
               style={{ objectFit: "cover" }}
               className="inline-block"
             />{" "}
@@ -60,10 +60,8 @@ export default function Home() {
               <div className="w-full h-[643px] relative overflow-hidden">
                 <Image
                   src="/project1.jpg"
-                  alt="image"
+                  alt=""
                   fill
-                  priority
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   style={{ objectFit: "cover" }}
                 />
               </div>
@@ -74,10 +72,8 @@ export default function Home() {
               <div className="w-full h-[643px] relative overflow-hidden">
                 <Image
                   src="/project2.jpg"
-                  alt="image"
+                  alt=""
                   fill
-                  priority
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   style={{ objectFit: "cover" }}
                 />
               </div>

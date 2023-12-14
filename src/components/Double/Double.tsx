@@ -58,10 +58,9 @@ export default function Double() {
         <Link href={`/project/${projects[0].id}`}>
           <div className="pb-[66.66%] relative">
             <Image
-              src="/project1.jpg"
-              alt="image"
-              fill={true}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              src={"/project1.jpg"}
+              alt=""
+              fill
               style={{ objectFit: "cover" }}
             />
           </div>
@@ -78,9 +77,8 @@ export default function Double() {
           <div className="pb-[66%] relative">
             <Image
               src="/project2.jpg"
-              alt="image"
-              fill={true}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              alt=""
+              fill
               style={{ objectFit: "cover" }}
             />
           </div>
