@@ -32,7 +32,7 @@ export default function SideBar({ isActive }: { isActive: boolean }) {
             <span className="opacity-30 hidden tablet:block">-</span>
             <AnimButton
               label="2023 Portfolio"
-              link="https://portfolio-phi-indol-46.vercel.app"
+              link="https://outoro.vercel.app"
             />
           </li>
           <li className="flex justify-between items-end">

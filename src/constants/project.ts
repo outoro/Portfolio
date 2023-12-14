@@ -46,7 +46,7 @@ export const projects: projectType[] = [
       "진행했던 프로젝트들을 담은 포트폴리오 사이트입니다. Next.js를 사용하여 SEO 성능 향상을 고려하며 개발하였습니다.",
     year: "2023",
     techStack: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"],
-    service: "https://portfolio-phi-indol-46.vercel.app",
+    service: "https://outoro.vercel.app",
     github: "https://github.com/outoro/portfolio",
     readme:
       "https://sand-newt-068.notion.site/2023-Portfolio-60b1c9d0648f4b1bbd7ab46c81dba97d?pvs=4",
